@@ -9,7 +9,7 @@ export function fixMarkdown(body: string | null | undefined, options: ReturnType
     return null;
   }
 
-  let fixedBody = body.split('\r\n').join(' \r\n ');
+  let fixedBody = body.split('\r').join('').split('\n').join(' \n');
 
   if (options.anonymize) {
     // Remove GitHub links linking to the repository
