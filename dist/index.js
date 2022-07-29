@@ -114,7 +114,7 @@ function fixMarkdown(body, options) {
     if (!body) {
         return null;
     }
-    let fixedBody = body.split('\r\n').join(' \r\n ');
+    let fixedBody = body.split('\r').join('').split('\n').join(' \n');
     if (options.anonymize) {
         // Remove GitHub links linking to the repository
         for (const word of fixedBody.split(' ').filter(utils_1.utils.onlyUnique)) {
